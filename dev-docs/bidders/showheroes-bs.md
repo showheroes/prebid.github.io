@@ -99,7 +99,6 @@ You could use this example and place it in .html example pages inside the Prebid
 
 #### instream
 
-
 Example of adunit configuration for the instream unit:
 
 ```javascript
