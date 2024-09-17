@@ -4,7 +4,7 @@ title: ShowHeroes
 description: Prebid ShowHeroes Bidder Adapter
 pbjs: true
 biddercode: showheroes-bs
-media_types: video, banner
+media_types: video
 gvl_id: 111
 tcfeu_supported: true
 usp_supported: true
@@ -30,12 +30,30 @@ All other parameters should be sent inside openRTB request.
 ### openRTB2 support
 
 {: .alert.alert-danger :}
-Starting with Prebid.js version 9.15 ShowHeores bidder adapter is requesting bids via openRTB protocol. Publishers can use the `ortb2` method of setting [First Party Data](https://docs.prebid.org/features/firstPartyData.html). Bidder supports all first-party data fields: site, user, segments, and imp-level first-party data.
+Starting with Prebid.js version 9.15 ShowHeores bidder adapter is requesting bids via openRTB protocol.  
+Publishers can use the `ortb2` method of setting [First Party Data](https://docs.prebid.org/features/firstPartyData.html). Bidder supports all first-party data fields: site, user, segments, and imp-level first-party data.
 
 ### testing
 
-While developing or testing locally, you can 'fake' the page URL by setting the: `qa.pageURL` parameter.  
-This will automatically set the `test: 1` parameter inside the openRTB request, marking this bid request as a test request.
+While developing or testing locally, you can request a test request by marking the openRTB as a test.
+To do that specifically for `showheroes-Bs` you can do:
+
+```javascript
+pbjs.setBidderConfig({
+  bidders: ['showheroesBs'],
+  config: {
+    ortb2: {
+      test:1
+    }
+  }
+})
+```
+
+Or, more easily you can mark the whole request as a test request by doing:
+
+```javascript
+pbjs.setConfig({config: {ortb2: {test: 1}}})
+```
 
 #### Outstream
 
