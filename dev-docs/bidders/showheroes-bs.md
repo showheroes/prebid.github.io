@@ -23,7 +23,7 @@ sidebarType: 1
 {: .table .table-bordered .table-striped }
 | Name        | Scope                            | Description                         | Example                                  | Type      |
 |-------------|----------------------------------|-------------------------------------|------------------------------------------|-----------|
-| `unitId`    | required (if not send playerId)  | Monetize unit ID                    | `'AACBTwsZVANd9NlB'`                     | `string`  |
+| `unitId`    | required                         | Monetize unit ID                    | `'AACBTwsZVANd9NlB'`                     | `string`  |
 
 All other parameters should be sent inside openRTB request.
 
