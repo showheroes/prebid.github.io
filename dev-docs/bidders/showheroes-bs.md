@@ -91,18 +91,6 @@ var adUnits = [
                 }
             }
         }],
-        renderer: {
-            url: 'https://acdn.adnxs.com/video/outstream/ANOutstreamVideo.js',
-            render: function (bid) {
-                // push to render queue because ANOutstreamVideo may not be loaded yet.
-                bid.renderer.push(() => {
-                    ANOutstreamVideo.renderAd({
-                        targetId: bid.adUnitCode, // target div id to render video.
-                        adResponse: bid.adResponse
-                    });
-                });
-            }
-        },
     }
 ];
 pbjs.que.push(function () {
