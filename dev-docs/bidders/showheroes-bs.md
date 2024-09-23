@@ -88,7 +88,6 @@ var adUnits = [
                 unitId: "AACBTwsZVANd9NlB",
                 qa: {
                     "endpoint": "https://vr-api.dev.showheroes.com/openrtb2/auction/",
-                    "pageURL": "https://testing.domain.com/"
                 }
             }
         }],
@@ -136,7 +135,6 @@ var videoAdUnit = {
               unitId: "AAFo8FVWXycNdR8K",
               qa: {
                   "endpoint": "https://vr-api.dev.showheroes.com/openrtb2/auction/",
-                  "pageURL": "https://dev-pagetests.viralize.com/"
               }
           }
           }
