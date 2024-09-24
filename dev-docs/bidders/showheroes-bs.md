@@ -23,7 +23,7 @@ sidebarType: 1
 {: .table .table-bordered .table-striped }
 | Name        | Scope                            | Description                         | Example                                  | Type      |
 |-------------|----------------------------------|-------------------------------------|------------------------------------------|-----------|
-| `unitId`    | required                         | Monetize unit ID                    | `'AACBTwsZVANd9NlB'`                     | `string`  |
+| `unitId`    | required                         | ShowHeroes MAX unit ID              | `'1234abcd-5678efgh'`                     | `string`  |
 
 All other parameters should be sent inside openRTB request.
 
@@ -85,10 +85,7 @@ var adUnits = [
         bids: [{
             bidder: "showheroes-bs",
             params: {
-                unitId: "AACBTwsZVANd9NlB",
-                qa: {
-                    "endpoint": "https://vr-api.dev.showheroes.com/openrtb2/auction/",
-                }
+                unitId: "1234abcd-5678efgh",
             }
         }],
     }
@@ -120,10 +117,7 @@ var videoAdUnit = {
           {
             bidder: 'showheroesBs',
             params: {
-              unitId: "AAFo8FVWXycNdR8K",
-              qa: {
-                  "endpoint": "https://vr-api.dev.showheroes.com/openrtb2/auction/",
-              }
+              unitId: "1234abcd-5678efgh",
           }
           }
         ]
